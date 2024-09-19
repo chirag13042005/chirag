@@ -1,0 +1,12 @@
+#create a 2*2 identity matrix
+d=np.eye(2)
+print(d)
+#create an array filled with random values
+e=np.random.random((2,2))
+print(e)
+
+#OUTPUT
+[[1. 0.]
+ [0. 1.]]
+[[0.00681056 0.11360668]
+ [0.34293251 0.62811813]]

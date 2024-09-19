@@ -1,0 +1,26 @@
+# Dictionary with student data
+students = [
+    {"name": "Alice", "id": "S001", "dept": "CS", "grade": "A"},
+    {"name": "Bob", "id": "S002", "dept": "Math", "grade": "B"},
+    {"name": "Charlie", "id": "S003", "dept": "Physics", "grade": "A"},
+    {"name": "David", "id": "S004", "dept": "CS", "grade": "C"}
+]
+
+# 1. Retrieve by department
+dept_students = [s for s in students if s['dept'] == "CS"]
+
+# 2. Retrieve by iloc (2nd student)
+second_student = students[1]
+
+# 3. Retrieve student ID by name
+charlie_id = next(s['id'] for s in students if s['name'] == "Charlie")
+
+# Output results
+print("Dept Students:", dept_students)
+print("Second Student:", second_student)
+print("Charlie's ID:", charlie_id)
+
+#OUTPUT
+Dept Students: [{'name': 'Alice', 'id': 'S001', 'dept': 'CS', 'grade': 'A'}, {'name': 'David', 'id': 'S004', 'dept': 'CS', 'grade': 'C'}]
+Second Student: {'name': 'Bob', 'id': 'S002', 'dept': 'Math', 'grade': 'B'}
+Charlie's ID: S003

@@ -1,0 +1,15 @@
+import numpy as np
+a=np.array([1,2,3])
+b=[4,7,8,12]
+print(a)
+print(type(a))
+print(a.shape)
+print(b)
+print(type(b))
+
+#OUTPUT
+[1 2 3]
+<class 'numpy.ndarray'>
+(3,)
+[4, 7, 8, 12]
+<class 'list'>

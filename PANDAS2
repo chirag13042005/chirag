@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+emp = ["CHIRAG","FORD","LAMBO"]
+id = [102,103,104]
+emp_series = pd.Series(emp)
+id_series = pd.Series(id)
+frame = {'Emp': emp_series,'ID':id_series}
+result = pd.DataFrame(frame)
+print(result)
+
+#OUTPUT
+      Emp   ID
+0  CHIRAG  102
+1    FORD  103
+2   LAMBO  104

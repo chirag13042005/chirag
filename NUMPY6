@@ -1,0 +1,21 @@
+#create an array of all zeros
+a=np.zeros((2,2))
+print(a)
+#create an array of all ones
+b=np.ones((1,2))
+print(b)
+#Create a constant array
+c=np.full((2,2),7)
+print(c)
+d=np.full((3,5),2)
+print(d)
+
+#OUTPUT
+[[0. 0.]
+ [0. 0.]]
+[[1. 1.]]
+[[7 7]
+ [7 7]]
+[[2 2 2 2 2]
+ [2 2 2 2 2]
+ [2 2 2 2 2]]

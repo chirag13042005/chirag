@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom
+
+# Parameters for the binomial distribution
+n = 10  # number of trials
+p = 0.5  # probability of success
+
+# Possible outcomes (0 to n successes)
+x = np.arange(0, n + 1)
+
+# Binomial probability mass function
+binom = binom.pmf(x, n, p)
+
+# Plotting the binomial distribution
+plt.bar(x, binom, color='blue', alpha=0.7)
+
+# Add labels and title
+plt.xlabel('Number of Successes')
+plt.ylabel('Probability')
+plt.title(f'Binomial Distribution (n={n}, p={p})')
+
+# Display the plot
+plt.show()
+
+
+
+

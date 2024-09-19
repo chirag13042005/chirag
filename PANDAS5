@@ -1,0 +1,54 @@
+# Creating a dictionary with student data
+students = [
+    {"name": "Alice", "id": "S001", "dept": "Computer Science", "grade": "A"},
+    {"name": "Bob", "id": "S002", "dept": "Mathematics", "grade": "B"},
+    {"name": "Charlie", "id": "S003", "dept": "Physics", "grade": "A"},
+    {"name": "David", "id": "S004", "dept": "Computer Science", "grade": "C"}
+]
+
+# 1. Retrieve data using department (e.g., "Computer Science")
+def retrieve_by_dept(dept):
+    return [student for student in students if student['dept'] == dept]
+
+# 2. Retrieve the iloc (index location) of the 2nd student
+def retrieve_by_iloc(index):
+    if index < len(students):
+        return students[index]
+    return "Index out of range"
+
+# 3. Retrieve the student ID given a student's name
+def retrieve_id_by_name(name):
+    for student in students:
+        if student["name"] == name:
+            return student["id"]
+    return "Student not found"
+    
+
+# Example usage:
+
+# Retrieve by department
+dept_students = retrieve_by_dept("Computer Science")
+print("Students in Computer Science department:")
+for student in dept_students:
+    print(student)
+
+# Retrieve by iloc (2nd student)
+second_student = retrieve_by_iloc(1)  # 0-based index, so 1 is the 2nd student
+print("\nSecond student based on iloc:")
+print(second_student)
+
+# Retrieve student ID by name
+student_id = retrieve_id_by_name("Charlie")
+print("\nCharlie's Student ID:")
+print(student_id)
+
+#OUTPUT
+Students in Computer Science department:
+{'name': 'Alice', 'id': 'S001', 'dept': 'Computer Science', 'grade': 'A'}
+{'name': 'David', 'id': 'S004', 'dept': 'Computer Science', 'grade': 'C'}
+
+Second student based on iloc:
+{'name': 'Bob', 'id': 'S002', 'dept': 'Mathematics', 'grade': 'B'}
+
+Charlie's Student ID:
+S003

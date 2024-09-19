@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+
+info = {'one':pd.Series([1,2,3,4,5], index=['a','b','c','d','e']),'two':pd.Series([1,2,3,4,5,6], index=['a','b','c','d','e','f'])}
+
+df = pd.DataFrame(info)
+print(df)
+
+#OUTPUT
+   one  two
+a  1.0    1
+b  2.0    2
+c  3.0    3
+d  4.0    4
+e  5.0    5
+f  NaN    6

@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+
+info = {'one':pd.Series([1,2], index=['a','b']),'two':pd.Series([1,2,3], index=['a','b','c'])}
+
+df = pd.DataFrame(info)
+print("The DataFrame")
+print(df)
+
+print("Delete the first column.")
+del df["one"]
+print(df)
+
+print("dlete the another column.")
+df.pop("two")
+print(df)
+
+#OUTPUT
+The DataFrame
+   one  two
+a  1.0    1
+b  2.0    2
+c  NaN    3
+Delete the first column.
+   two
+a    1
+b    2
+c    3
+dlete the another column.
+Empty DataFrame
+Columns: []
+Index: [a, b, c]
